@@ -1,0 +1,10 @@
+#graph-svg {
+  overflow: visible;
+}
+
+#graph-rect {
+  fill-opacity: 0;
+  stroke: var(--secondary);
+  stroke-width: 2;
+  text-align: center;
+}
