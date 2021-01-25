@@ -8,3 +8,18 @@
   stroke-width: 2;
   text-align: center;
 }
+
+.graph-nodes {
+  fill: var(--secondary);
+}
+
+circle:hover {
+  fill: var(--primary);
+}
+
+.graph-labels {
+  display: none;
+  font-size: 25px;
+  fill: var(--theme);
+  text-anchor: middle;
+}
