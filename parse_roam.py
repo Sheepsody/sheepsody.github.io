@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     data = parse_links(files_list)
 
-    with open(os.path.join(args.hugo, "graph.json"), "w") as out:
+    with open(os.path.join(args.hugo, "static/data/graph.json"), "w") as out:
         json.dump(
             {
                 "nodes": [
