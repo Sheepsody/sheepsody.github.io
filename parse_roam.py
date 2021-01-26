@@ -63,11 +63,13 @@ def parse_cli():
 if __name__ == "__main__":
     args = parse_cli()
 
+    os.makedirs(os.path.join(args.hugo, "static/data/"), exist_ok=True)
+
     files_list = list_roam_files(args.roam)
 
     data = parse_links(files_list)
 
-    with open(os.path.join(args.hugo, "static/graph.json"), "w") as out:
+    with open(os.path.join(args.hugo, "graph.json"), "w") as out:
         json.dump(
             {
                 "nodes": [

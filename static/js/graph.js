@@ -1,19 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('plop');
-    d3.json('/graph.json').then((data) => {
-        // Extract SVG placeholder and its dimensions
+    d3.json('/data/graph.json').then((data) => {
         var svg = d3.select('#graph-svg');
         var [_, width, height] = /(\w+)\s(\w+)$/g.exec(svg.attr('viewBox'));
 
         var nodes_data = data['nodes'];
 
-        //set up the simulation
-        //nodes only for now
         var simulation = d3.forceSimulation().alpha(0.1).nodes(nodes_data);
 
-        //add forces
-        //we're going to add a charge to each node
-        //also going to add a centering force
         simulation
             .force('charge', d3.forceManyBody().strength(-100))
             .force('center', d3.forceCenter(width / 2, height / 2))
@@ -26,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 .filter('#' + CSS.escape(d.currentTarget.id))
                 .style('display', 'block');
         };
-
         handleMouseOut = (d) => {
             nde = d3.select(d.currentTarget);
             nde.attr('r', nde.attr('r') / 1.5);
@@ -35,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 .style('display', 'none');
         };
 
-        //draw circles for the nodes
         var node = svg
             .append('g')
             .attr('class', 'nodes-group')
@@ -64,13 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .attr('dy', -50)
             .text((d) => d.title);
 
-        //Time for the links
-
-        //Create links data
         var links_data = data['links'];
-
-        //Create the link force
-        //We need the id accessor to use named sources and targets
 
         var link_force = d3
             .forceLink(links_data)
@@ -79,12 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .strength(0.1);
 
-        //Add a links force to the simulation
-        //Specify links  in d3.forceLink argument
-
         simulation.force('links', link_force);
 
-        //draw lines for the links
         var link = svg
             .append('g')
             .attr('class', 'links-group')
