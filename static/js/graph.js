@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     d3.json('/graph.json').then((data) => {
         // Extract SVG placeholder and its dimensions
         var svg = d3.select('#graph-svg');
-        var [_, width, height] = /(\d+)\s(\d+)$/g.exec(svg.attr('viewBox'));
+        var [_, width, height] = /(\w+)\s(\w+)$/g.exec(svg.attr('viewBox'));
 
         var nodes_data = data['nodes'];
 
