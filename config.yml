@@ -1,3 +1,4 @@
+baseURL: https://notes.sheepsody.com/
 title: Sheepsody's Second Brain
 paginate: 5
 theme: PaperMod
