@@ -10,11 +10,7 @@
 }
 
 .graph-nodes {
-  fill: var(--secondary);
-}
-
-circle:hover {
-  fill: var(--primary);
+  stroke: var(--primary);
 }
 
 .graph-labels {
