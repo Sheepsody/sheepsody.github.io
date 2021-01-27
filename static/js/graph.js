@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     d3.json('/data/graph.json').then((data) => {
+        const links = data.links.map((d) => Object.create(d));
+        const nodes = data.nodes.map((d) => Object.create(d));
+
         var svg = d3.select('#graph-svg');
         var [_, width, height] = /(\w+)\s(\w+)$/g.exec(svg.attr('viewBox'));
 
-        var nodes_data = data['nodes'];
-
-        var simulation = d3.forceSimulation().alpha(0.1).nodes(nodes_data);
+        var simulation = d3.forceSimulation().alpha(0.1).nodes(nodes);
 
         simulation
             .force('charge', d3.forceManyBody().strength(-100))
             .force('center', d3.forceCenter(width / 2, height / 2))
-            .force('collision', d3.forceCollide());
+            .force('collision', d3.forceCollide())
+            .force(
+                'link',
+                d3.forceLink(data['links']).id((d) => d.id)
+            );
 
         handleMouseOver = (d) => {
             nde = d3.select(d.currentTarget);
@@ -31,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .append('g')
             .attr('class', 'nodes-group')
             .selectAll('circle')
-            .data(nodes_data)
+            .data(nodes)
             .enter()
             .append('a')
             .attr('href', (d) => ['/posts', d.slug].join('/'))
@@ -46,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .append('g')
             .attr('class', 'labels-group')
             .selectAll('text')
-            .data(nodes_data)
+            .data(nodes)
             .enter()
             .append('text')
             .attr('class', 'graph-labels')
@@ -55,22 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
             .attr('dy', -50)
             .text((d) => d.title);
 
-        var links_data = data['links'];
-
-        var link_force = d3
-            .forceLink(links_data)
-            .id(function (d) {
-                return d.id;
-            })
-            .strength(0.1);
-
-        simulation.force('links', link_force);
-
         var link = svg
             .append('g')
             .attr('class', 'links-group')
             .selectAll('line')
-            .data(links_data)
+            .data(links)
             .enter()
             .append('line')
             .attr('stroke-width', 2)
