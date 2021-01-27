@@ -6,6 +6,7 @@ import os
 import re
 import json
 import networkx as nx
+import community as louvain
 
 LINKS_SECTION_DELIMITER = "## Links to this note {#links-to-this-note}"
 
@@ -61,6 +62,12 @@ def pagerank(graph):
         graph.nodes[node]["rank"] = rank * 10
 
 
+def group_nodes(graph):
+    partition = louvain.best_partition(graph.to_undirected())
+    for i, g in partition.items():
+        graph.nodes[i]["group"] = g
+
+
 def dump_graph(filepath):
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, "w") as out:
@@ -92,5 +99,6 @@ if __name__ == "__main__":
     graph = create_graph_from_slugs(posts_path, files_list)
 
     pagerank(graph)
+    group_nodes(graph)
 
     dump_graph(graph_path)
