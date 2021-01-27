@@ -1,1 +1,3 @@
 public/
+static/data/
+.mypy_cache/
