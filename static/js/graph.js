@@ -13,10 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
         simulation
             .force('charge', d3.forceManyBody().strength(-100))
             .force('center', d3.forceCenter(width / 2, height / 2))
-            .force('collision', d3.forceCollide())
+            .force(
+                'collision',
+                d3.forceCollide().radius((d) => d.r * 1.5)
+            )
             .force(
                 'link',
-                d3.forceLink(data['links']).id((d) => d.id)
+                d3
+                    .forceLink(data['links'])
+                    .id((d) => d.id)
+                    .strength(0.5)
             );
 
         handleMouseOver = (d) => {

@@ -8,5 +8,5 @@ _This note does not have a description yet._
 
 ## Links to this note {#links-to-this-note}
 
-- [Data Mining]({{< relref "20210125193220-data_mining" >}})
-- [Distributed Information Retrieval (DIR)]({{< relref "20210114115420-dir" >}})
+- [home\_sheepsody\_dropbox\_roam\_20210114115420\_dir\_org]({{< relref "20210114115420-dir" >}})
+- [home\_sheepsody\_dropbox\_roam\_20210125193220\_data\_mining\_org]({{< relref "20210125193220-data_mining" >}})
