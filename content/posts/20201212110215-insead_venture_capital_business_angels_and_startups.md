@@ -7,41 +7,6 @@ draft = false
 tags
 : [Venture Capitals]({{< relref "20210124000000-venture_capital" >}})
 
-## Table of contents {#table-of-contents}
-
-<div class="ox-hugo-toc toc">
-<div></div>
-
-<div class="heading">Table of Contents</div>
-
-- [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-  - [Henning Piezunka](#henning-piezunka)
-  - [How to use the course ?](#how-to-use-the-course)
-  - [Example of the course](#example-of-the-course)
-- [Primer in Venture Capital](#primer-in-venture-capital)
-  - [Why <span class="underline">can</span> ventures benefit from VC ?](#why-ventures-benefit-from-vc)
-  - [Money Flow](#money-flow)
-  - [Liquidity](#liquidity)
-  - [VC: agglomerators vs. specialists](#vc-agglomerators-vs-dot-specialists)
-  - [How does VCs work depending on countries ?](#how-does-vcs-work-depending-on-countries)
-  - [The process is the same as _dating_](#the-process-is-the-same-as-dating)
-- [Access](#access)
-  - [Attracting high potential individuals](#attracting-high-potential-individuals)
-    - [_Fishing_ : prior success helps being more successful](#fishing-prior-success-helps-being-more-successful)
-    - [_Hunting_ : head-hunt people from their personal networks](#hunting-head-hunt-people-from-their-personal-networks)
-  - [Rejections](#rejections)
-  - [Organization](#organization)
-- [Screening](#screening)
-  - [Exercise](#exercise)
-    - [Subject: judge whether the deal made by a VC was any good](#subject-judge-whether-the-deal-made-by-a-vc-was-any-good)
-  - [The network](#the-network)
-  - [Contrarian](#contrarian)
-  - [The 7 domain framework](#the-7-domain-framework)
-
-</div>
-<!--endtoc-->
-
 ## Introduction {#introduction}
 
 ### Henning Piezunka {#henning-piezunka}
@@ -89,7 +54,7 @@ tags
 - Entrepreneurs/Venture
 - Liquidity event
 
-{{< figure src="images/vc_circle.png" caption="Figure 1: The money flow circle" width="600px" >}}
+{{< figure src="/ox-hugo/vc_circle.png" caption="Figure 1: The money flow circle" width="600px" >}}
 
 ### Liquidity {#liquidity}
 

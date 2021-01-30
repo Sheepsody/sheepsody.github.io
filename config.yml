@@ -15,12 +15,15 @@ minify:
 
 menu:
   main:
+    - name: Home
+      url: /
+      weight: 1
     - name: Graph
       url: graph
-      weight: 10
+      weight: 2
     - name: Search
       url: search/
-      weight: 10
+      weight: 3
     - name: Tags
       url: tags/
       weight: 10
@@ -35,6 +38,7 @@ outputs:
     - JSON
 
 params:
+  ShowToc: true
   description: "Sheepsody's Second Brain - A collection of personal notes"
   author: Victor Vialard
 
@@ -45,32 +49,25 @@ params:
   # disableSpecial1stPost: true
   displayFullLangName: true
   # comments: false
-  images: ["papermod-cover.png"]
+  # images: ["papermod-cover.png"]
 
   homeInfoParams:
-    Title: "PaperMod"
+    Title: "Sheepsody's Second Brain"
     Content: >
-      Welcome to demo of hugo's theme PaperMod.
+      - Welcome to my second brain, the website where I store notes about topics I’m learning about or that I’m simply interested in.
 
-      - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-      - Do give a 🌟 on Github !
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+      - To browse the notes, you can either use the knowledge graph or directly fuzzy-search through the index.
+
+      - If you have any remarks or anything you want to discuss, don’t hesitate to reach out to me!
 
   socialIcons:
-    - name: github
+    - name: Github
       url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: KoFi
-      url: "https://ko-fi.com/adityatelange"
-    - name: RsS
-      url: "index.xml"
+    - name: linkedin
+      url: "https://github.com/adityatelange/hugo-PaperMod"
+    - name: email
+      url: "victor.vialard@mines-paristech.fr"
 
-  # label:
-  #     text: "Home"
-  #     icon: icon.png
-  #     iconHeight: 35
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
   assets:
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
