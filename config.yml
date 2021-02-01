@@ -62,9 +62,9 @@ params:
 
   socialIcons:
     - name: Github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
+      url: "https://github.com/Sheepsody/MySecondBrainWebsite"
     - name: linkedin
-      url: "https://github.com/adityatelange/hugo-PaperMod"
+      url: "https://www.linkedin.com/in/victor-vialard/"
     - name: email
       url: "victor.vialard@mines-paristech.fr"
 
