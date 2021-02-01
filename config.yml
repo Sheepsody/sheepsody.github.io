@@ -54,11 +54,11 @@ params:
   homeInfoParams:
     Title: "Sheepsody's Second Brain"
     Content: >
-      - Welcome to my second brain, the website where I store notes about topics I’m learning about or that I’m simply interested in.
+      Welcome to my second brain, the website where I store notes about topics I’m learning about or that I’m simply interested in.
 
-      - To browse the notes, you can either use the knowledge graph or directly fuzzy-search through the index.
+      To browse the notes, you can either use the knowledge graph (where you will find more infos about the methods I use) or directly fuzzy-search through the index.
 
-      - If you have any remarks or anything you want to discuss, don’t hesitate to reach out to me!
+      If you have any remarks or anything you want to discuss, don’t hesitate to reach out to me!
 
   socialIcons:
     - name: Github
