@@ -24,6 +24,8 @@
 </svg>
 
   <div class="post-content">
-    {{- partial "anchored_headings.html" .Content -}}
+      <br/>
+      <p>This is my knowledge graph, currently containing <strong>{{ len .Site.RegularPages }}</strong> notes.</p>
+      {{- partial "anchored_headings.html" .Content -}}
   </div>
 {{- end }}
