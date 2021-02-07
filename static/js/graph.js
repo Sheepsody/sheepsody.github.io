@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var simulation = d3.forceSimulation().alpha(0.1).nodes(nodes);
 
         simulation
-            .force('charge', d3.forceManyBody().strength(-100))
+            .force('charge', d3.forceManyBody().strength(-250))
             .force('center', d3.forceCenter(width / 2, height / 2))
             .force(
                 'collision',
