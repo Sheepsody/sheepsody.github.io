@@ -11,18 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
         var simulation = d3.forceSimulation().alpha(0.1).nodes(nodes);
 
         simulation
-            .force('charge', d3.forceManyBody().strength(-250))
+            .force('charge', d3.forceManyBody().strength(-100))
             .force('center', d3.forceCenter(width / 2, height / 2))
             .force(
                 'collision',
-                d3.forceCollide().radius((d) => d.r * 1.5)
+                d3.forceCollide(100).radius((d) => d.r * 1.5)
             )
             .force(
                 'link',
                 d3
                     .forceLink(data['links'])
                     .id((d) => d.id)
-                    .strength(0.5)
+                    .distance(30)
+                    .strength(1)
             );
 
         handleMouseOver = (d) => {
@@ -65,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .append('circle')
             .attr('class', 'graph-nodes')
             .attr('id', (d) => d.id)
-            .attr('r', (d) => d.rank * 10)
+            .attr('r', (d) => d.rank * 15)
             .attr('fill', (d) => COLORS[d.group % COLORS.length])
             .on('mouseover', handleMouseOver)
             .on('mouseout', handleMouseOut);
