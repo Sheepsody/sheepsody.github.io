@@ -3,7 +3,7 @@ title: "Knowledge Graph"
 layout: graph
 ---
 
-The communities inside this directed graph are detected using the [Louvain method](<ref "/posts/20210125193003-louvain">), and the notes ranked according to the [PageRank algorithm](<ref "/posts/20210125210011-pagerank">).
+The communities inside this directed graph are detected using the [Louvain method]({{<ref "/posts/20210125193003-louvain#modularity-optimization-louvain">}}), and the notes ranked according to the [PageRank algorithm]({{<ref "/posts/20210125210011-pagerank">}}).
 
 I use [Roam](https://github.com/org-roam/org-roam) as my note-taking and knowledge management methodology, which itself is an implementation of the [Zettlekasten](https://en.wikipedia.org/wiki/Zettelkasten) (or slip-box) method. Some notes are thus intentionally empty, and used only to link the notes between each other.
 
