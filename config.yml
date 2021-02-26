@@ -11,7 +11,7 @@ buildExpired: false
 
 minify:
   disableXML: true
-  # minifyOutput: true
+  minifyOutput: true
 
 menu:
   main:
@@ -27,9 +27,6 @@ menu:
     - name: Tags
       url: tags/
       weight: 10
-    - name: Categories
-      url: categories/
-      weight: 10
 
 outputs:
   home:
@@ -43,13 +40,8 @@ params:
   author: Victor Vialard
 
   defaultTheme: auto
-  # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
-  # disableSpecial1stPost: true
   displayFullLangName: true
-  # comments: false
-  # images: ["papermod-cover.png"]
+  comments: false
 
   homeInfoParams:
     Title: "Sheepsody's Second Brain"
@@ -81,11 +73,9 @@ taxonomies:
 
 markup:
   highlight:
-    # anchorLineNos: true
     codeFences: true
     guessSyntax: true
     lineNos: true
-    # noClasses: false
     style: monokai
 
 privacy:
