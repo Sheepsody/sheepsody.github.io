@@ -6,7 +6,7 @@ lastmod = 2021-05-08
 draft = false
 +++
 
-:CUSTOM_ID: ([Besson et al. 2020](#org185743d))
+:CUSTOM_ID: ([Besson et al. 2020](#org1230a9d))
 :AUTHOR: Besson, P. et al.
 :YEAR: 2020
 
@@ -204,4 +204,4 @@ tags
 
 ## Bibliography {#bibliography}
 
-<a id="org185743d"></a>Besson, Paul, Lasnier Matthieu, Stephanie Sureau, and Cui Biwei. 2020. “Introduction to Market Microstructure - Institut Louis Bachelier.”
+<a id="org1230a9d"></a>Besson, Paul, Lasnier Matthieu, Stephanie Sureau, and Cui Biwei. 2020. “Introduction to Market Microstructure - Institut Louis Bachelier.”

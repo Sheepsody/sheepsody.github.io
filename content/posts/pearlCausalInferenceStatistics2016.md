@@ -9,7 +9,7 @@ tags
 : [Causality]({{< relref "20210504-causality" >}})
 
 source
-: ([Pearl, Glymour, and P. Jewell 2016](#org3ea5929))
+: ([Pearl, Glymour, and P. Jewell 2016](#orgf385b64))
 
 :CUSTOM_ID: pearlCausalInferenceStatistics2016
 :AUTHOR: Pearl, J. et al.
@@ -21,7 +21,7 @@ source
 
 #### Chains {#chains}
 
-{{< figure src="/ox-hugo/plantuml-lCeTEY.png" >}}
+{{< figure src="/ox-hugo/plantuml-CtKZzF.png" >}}
 
 - Z and X are _likely dependent_
 - Z and X are _independant, conditional on Y_, i.e. \\(P(Z=z|Y=y, X=x) = P(Z=z|Y=y)\\)
@@ -37,7 +37,7 @@ Rule: **Conditional Independence on Chains**
 
 #### Forks {#forks}
 
-{{< figure src="/ox-hugo/plantuml-owGT6D.png" >}}
+{{< figure src="/ox-hugo/plantuml-W0BKP2.png" >}}
 
 - Z and Y are _likely dependent_
 - Z and Y are _independant, conditional on X_
@@ -48,7 +48,7 @@ Rule: **Conditional Independence in Forks**
 
 ### Colliders {#colliders}
 
-{{< figure src="/ox-hugo/plantuml-GMduTR.png" >}}
+{{< figure src="/ox-hugo/plantuml-qS5Dho.png" >}}
 
 - X and Y are _dependent conditional on Z_
 
@@ -115,13 +115,13 @@ Definition: **Markov Blanket**
 
 _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and Z for gender
 
-{{< figure src="/ox-hugo/plantuml-JtrmA1.png" >}}
+{{< figure src="/ox-hugo/plantuml-VAiNyM.png" >}}
 
 - Our goal is to estimate the _ACE ("Average Causal Effect")_, i.e. \\(P(Y = 1|do(X = 1)) − P(Y = 1|do(X = 0))\\)
   - Without the _causal story_ (i.e. the graph), it is impossible to estimate causal effects
   - The causal effect \\(P(Y = y|do(X = x))\\) is the same as the conditional probability \\(P\_{m} (Y = y|X = x)\\), in the following _manipulated model_
 
-{{< figure src="/ox-hugo/plantuml-PM2hnc.png" >}}
+{{< figure src="/ox-hugo/plantuml-FDehgT.png" >}}
 
 - **Adjustment-formula**
 
@@ -150,7 +150,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 - _Ex:_ effect of smoking on lung cancer
 
-{{< figure src="/ox-hugo/plantuml-UPE9dn.png" >}}
+{{< figure src="/ox-hugo/plantuml-UKFG1v.png" >}}
 
 - Applying 2 times the front-door criteria, we find that :
 
@@ -191,7 +191,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 ### Mediation {#mediation}
 
-{{< figure src="/ox-hugo/plantuml-ctKzU2.png" >}}
+{{< figure src="/ox-hugo/plantuml-4BcDWg.png" >}}
 
 - The _mediator_ affects the dependent variable
 
@@ -236,13 +236,13 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 - Identifying Structural Coefficients and Causal Effect, or _"identifiability"_
   - How to express the path coefficients associated with total and direct effects from covariances and regression coefficients ?
 
-{{< figure src="/ox-hugo/plantuml-AzDX15.png" >}}
+{{< figure src="/ox-hugo/plantuml-rgMPlZ.png" >}}
 
 - _Ex:_ Determine total causal effect of X on Y
   - Backdoor criterion → adjust on T → regress Y on X & T
   - \\(y = r\_{X}X + r\_{T}T + \epsilon\\), where \\(r\_{X}\\) is the total effect of X on Y
 
-{{< figure src="/ox-hugo/plantuml-pywAHi.png" >}}
+{{< figure src="/ox-hugo/plantuml-RwJNnj.png" >}}
 
 - _Ex:_ Determine direct causal effect of X on Y.
   - We need to block both backdoors and indirect paths from X to Y
@@ -296,7 +296,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 - _Graphical Representation of Counterfactuals_
   - Under the fundamental law of counterfactuals, we remove all the edges entering the variable X to get the modified world \\(M\_{X}\\)
 
-{{< figure src="/ox-hugo/plantuml-TyggMw.png" >}}
+{{< figure src="/ox-hugo/plantuml-aefsK1.png" >}}
 
 - **Theorem**: _Counterfactual Interpretation of Backdoor_
 
@@ -337,7 +337,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 #### Toolkit for Mediation {#toolkit-for-mediation}
 
-{{< figure src="/ox-hugo/plantuml-4DoBPF.png" >}}
+{{< figure src="/ox-hugo/plantuml-JQKJbB.png" >}}
 
 - **Definitions**
   - **Total Effect**
@@ -352,4 +352,4 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 ## Bibliography {#bibliography}
 
-<a id="org3ea5929"></a>Pearl, Judea, Madelyn Glymour, and Nicholas P. Jewell. 2016. _Causal Inference in Statistics_. 1st edition. Wiley.
+<a id="orgf385b64"></a>Pearl, Judea, Madelyn Glymour, and Nicholas P. Jewell. 2016. _Causal Inference in Statistics_. 1st edition. Wiley.
