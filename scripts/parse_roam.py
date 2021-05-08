@@ -46,7 +46,7 @@ def create_graph_from_slugs(posts_path, slugs_list):
 
         title = extract_title(content)
 
-        graph.add_node(index, id=index, title=title, slug=slug, rank=1)
+        graph.add_node(index, id=index, title=title, slug=slug.lower(), rank=1)
 
         links = extract_links(content)
         for l in links:
