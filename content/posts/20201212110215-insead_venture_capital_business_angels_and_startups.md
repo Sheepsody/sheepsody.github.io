@@ -54,7 +54,7 @@ tags
 - Entrepreneurs/Venture
 - Liquidity event
 
-{{< figure src="images/vc_circle.png" caption="Figure 1: The money flow circle" width="600px" >}}
+{{< figure src="/ox-hugo/vc_circle.png" caption="Figure 1: The money flow circle" width="600px" >}}
 
 ### Liquidity {#liquidity}
 
