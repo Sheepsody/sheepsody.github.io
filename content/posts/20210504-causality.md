@@ -7,11 +7,10 @@ draft = false
 +++
 
 tags
-: [Statistics]({{< relref "20210503-statistics" >}})
+: [Statistics]({{<relref "20210503-statistics.md#" >}})
+
 
 ressources
 : [Univ. of Chicago CS-594](https://www.cs.uic.edu/~elena/courses/fall19/cs594cil.html)
 
-## Links to this note {#links-to-this-note}
 
-- [Causal Inference in Statistics : A Primer]({{< relref "pearlCausalInferenceStatistics2016" >}})

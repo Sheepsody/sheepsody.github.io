@@ -8,6 +8,4 @@ draft = false
 
 _This note does not have a description yet._
 
-## Links to this note {#links-to-this-note}
 
-- [Causality]({{< relref "20210504-causality" >}})

@@ -1,0 +1,9 @@
++++
+title = "Entrepreneurship"
+author = ["Victor Vialard"]
+draft = false
++++
+
+_This note does not have a description yet._
+
+
