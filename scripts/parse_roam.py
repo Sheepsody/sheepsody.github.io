@@ -37,8 +37,8 @@ def extract_links(content):
     return links
 
 def update_files(files_list):
-    """ Fix current exporting issues
-    : [Machine Learning]({{<relref "./20201209095843-ml_org.md#" >}})
+    """
+    Fixed refs file
     """
     for index, slug in enumerate(files_list):
 
@@ -47,8 +47,7 @@ def update_files(files_list):
             content = f.read()
 
         # FIXME: Issue with expoting
-        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/refs/', '', content)
-        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/', '', content)
+        content = re.sub(r'refs/', '', content)
 
         with open(filepath, "w") as f:
             f.write(content)

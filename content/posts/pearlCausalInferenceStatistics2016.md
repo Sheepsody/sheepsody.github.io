@@ -17,7 +17,7 @@ tags
 
 #### Chains {#chains}
 
-{{< figure src="/ox-hugo/plantuml-pqx2lc.png" >}}
+{{< figure src="/ox-hugo/plantuml-gg7Lrv.png" >}}
 
 -   Z and X are _likely dependent_
 -   Z and X are _independant, conditional on Y_, i.e. \\(P(Z=z|Y=y, X=x) = P(Z=z|Y=y)\\)
@@ -34,7 +34,7 @@ Rule: **Conditional Independence on Chains**
 
 #### Forks {#forks}
 
-{{< figure src="/ox-hugo/plantuml-2lVkIu.png" >}}
+{{< figure src="/ox-hugo/plantuml-Ct5QIG.png" >}}
 
 -   Z and Y are _likely dependent_
 -   Z and Y are _independant, conditional on X_
@@ -46,7 +46,7 @@ Rule: **Conditional Independence in Forks**
 
 ### Colliders {#colliders}
 
-{{< figure src="/ox-hugo/plantuml-6IsBL7.png" >}}
+{{< figure src="/ox-hugo/plantuml-3tOYDb.png" >}}
 
 -   X and Y are _dependent conditional on Z_
 
@@ -113,13 +113,13 @@ Definition: **Markov Blanket**
 
 _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and Z for gender
 
-{{< figure src="/ox-hugo/plantuml-v6pHCo.png" >}}
+{{< figure src="/ox-hugo/plantuml-n7bxMI.png" >}}
 
 -   Our goal is to estimate the _ACE ("Average Causal Effect")_, i.e. \\(P(Y = 1|do(X = 1)) − P(Y = 1|do(X = 0))\\)
     -   Without the _causal story_ (i.e. the graph), it is impossible to estimate causal effects
     -   The causal effect \\(P(Y = y|do(X = x))\\) is the same as the conditional probability \\(P\_{m} (Y = y|X = x)\\), in the following _manipulated model_
 
-{{< figure src="/ox-hugo/plantuml-BfDUM1.png" >}}
+{{< figure src="/ox-hugo/plantuml-mSOvId.png" >}}
 
 -   **Adjustment-formula**
     -   \\(P(Y = y|do(X = x)) = \sum\_{z} P(Y = y|X = x, Z = z)P(Z = z)\\)
@@ -147,7 +147,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 -   _Ex:_ effect of smoking on lung cancer
 
-{{< figure src="/ox-hugo/plantuml-3wxjEw.png" >}}
+{{< figure src="/ox-hugo/plantuml-KMarN6.png" >}}
 
 -   Applying 2 times the front-door criteria, we find that :
     -   \\(P(Y = y|do(X = x)) = \sum\_{z} \sum\_{x \prime} P(Y = y|Z = z, X = x \prime )P(X = x \prime )P(Z = z|X = x)\\)
@@ -188,7 +188,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 ### Mediation {#mediation}
 
-{{< figure src="/ox-hugo/plantuml-eRPC7Z.png" >}}
+{{< figure src="/ox-hugo/plantuml-MkC22f.png" >}}
 
 -   The _mediator_ affects the dependent variable
     -   _Ex:_ gender may also have an indirect effect on hiring through the mediating variable of qualifications (Z)
@@ -227,13 +227,13 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 -   Identifying Structural Coefficients and Causal Effect, or _"identifiability"_
     -   How to express the path coefficients associated with total and direct effects from covariances and regression coefficients ?
 
-{{< figure src="/ox-hugo/plantuml-q585Ku.png" >}}
+{{< figure src="/ox-hugo/plantuml-tMCQhf.png" >}}
 
 -   _Ex:_ Determine total causal effect of X on Y
     -   Backdoor criterion → adjust on T → regress Y on X & T
     -   \\(y = r\_{X}X + r\_{T}T + \epsilon\\), where \\(r\_{X}\\) is the total effect of X on Y
 
-{{< figure src="/ox-hugo/plantuml-VEXrjm.png" >}}
+{{< figure src="/ox-hugo/plantuml-nZaw1w.png" >}}
 
 -   _Ex:_ Determine direct causal effect of X on Y.
     -   We need to block both backdoors and indirect paths from X to Y
@@ -286,7 +286,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 -   _Graphical Representation of Counterfactuals_
     -   Under the fundamental law of counterfactuals, we remove all the edges entering the variable X to get the modified world \\(M\_{X}\\)
 
-{{< figure src="/ox-hugo/plantuml-BHoIis.png" >}}
+{{< figure src="/ox-hugo/plantuml-MCynJs.png" >}}
 
 -   **Theorem**: _Counterfactual Interpretation of Backdoor_
     -   If a set Z of variables satisfies the backdoor condition relative to (X, Y), then, for all x, the counterfactual Y x is conditionally independent of X given Z
@@ -328,7 +328,7 @@ _Ex:_ As in Simpson's paradox, where X stands for drug usage, Y for recovery and
 
 #### Toolkit for Mediation {#toolkit-for-mediation}
 
-{{< figure src="/ox-hugo/plantuml-nGm7po.png" >}}
+{{< figure src="/ox-hugo/plantuml-lSIwA2.png" >}}
 
 -   **Definitions**
     -   **Total Effect**
