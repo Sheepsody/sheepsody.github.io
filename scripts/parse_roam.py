@@ -36,9 +36,22 @@ def extract_links(content):
     links = re.findall(r'<\s*relref\s+"([^"^#]+)\.md#"\s+>', content)
     return links
 
+def update_files(files_list):
+    """ Fix current exporting issues
+    : [Machine Learning]({{<relref "./20201209095843-ml_org.md#" >}})
+    """
+    for index, slug in enumerate(files_list):
 
-#: [Machine Learning]({{<relref "./20201209095843-ml_org.md#" >}})
+        filepath = os.path.join(posts_path, slug + ".md")
+        with open(filepath, "r") as f:
+            content = f.read()
 
+        # FIXME: Issue with expoting
+        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/refs/', '', content)
+        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/', '', content)
+
+        with open(filepath, "w") as f:
+            f.write(content)
 
 def create_graph_from_slugs(posts_path, slugs_list):
     print(slugs_list)
@@ -49,13 +62,6 @@ def create_graph_from_slugs(posts_path, slugs_list):
 
         filepath = os.path.join(posts_path, slug + ".md")
         content = read_file(filepath)
-
-        # FIXME: Issue with expoting
-        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/refs/', '', content)
-        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/', '', content)
-
-        with open(filepath, "w") as f:
-            f.write(content)
 
         title = extract_title(content)
         print(title)
@@ -111,6 +117,8 @@ if __name__ == "__main__":
     graph_path = os.path.join(args.hugo, "static/data", "graph.json")
 
     files_list = list_slugs(posts_path)
+
+    update_files(files_list)
 
     graph = create_graph_from_slugs(posts_path, files_list)
 
