@@ -11,9 +11,9 @@ tags
 : [Entreprise]({{<relref "20210203163934-entreprise.md#" >}})
 
 source
-: ([Bommier and Renouard 2018](#orgf584eae))
+: ([Bommier and Renouard 2018](#org1f8e755))
 
-Ce fichier contient les notes que j'ai pu prendre au sujet de ([Bommier and Renouard 2018](#orgf584eae)), dans le cadre du cours _Éthique des multinationales_, aux Mines ParisTech. Il ne s'agit donc pas d'un résumé exhaustif du livre.
+Ce fichier contient les notes que j'ai pu prendre au sujet de ([Bommier and Renouard 2018](#org1f8e755)), dans le cadre du cours _Éthique des multinationales_, aux Mines ParisTech. Il ne s'agit donc pas d'un résumé exhaustif du livre.
 
 
 ## Introduction {#introduction}
@@ -344,7 +344,7 @@ La sobriété, ce n'est pas un retour à la bougie, mais au contraire réforme d
 
 ## Bibliography {#bibliography}
 
-<a id="orgf584eae"></a>Bommier, Swann, and Cécile Renouard. 2018. _L’entreprise Comme Commun: Au-Delà de La RSE_. Éditions Charles Léopold Mayer.
+<a id="org1f8e755"></a>Bommier, Swann, and Cécile Renouard. 2018. _L’entreprise Comme Commun: Au-Delà de La RSE_. Éditions Charles Léopold Mayer.
 
 [^fn:1]: Selon les estimations du professeur McKibben, 80% des réserves fossiles devraient rester sous Terre afin de pallier au réchauffement climatique.
 [^fn:2]: Voir la _Boston Tea Party_ et la _"marche du sel"_ de Gandhi

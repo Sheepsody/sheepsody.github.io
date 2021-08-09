@@ -14,3 +14,8 @@ ressources
 : [Univ. of Chicago CS-594](https://www.cs.uic.edu/~elena/courses/fall19/cs594cil.html)
 
 
+## Links to this note {#links-to-this-note}
+
+-   [Causal Inference in Statistics : A Primer]({{<relref "pearlCausalInferenceStatistics2016.md#" >}})
+
+> [Causality]({{<relref "20210504-causality.md#" >}})

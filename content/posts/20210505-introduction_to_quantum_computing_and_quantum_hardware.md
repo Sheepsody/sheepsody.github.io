@@ -54,7 +54,7 @@ The coordinates of a block are given by the _Bloch vector_ \\(r = ( sin \theta c
 
 **Careful :** on the Bloch sphere, angles are two times bigger compare to the Hilbert space. Thus to orthogonal elements have an angle of 180°.
 
-{{< figure src="/ox-hugo/bloch.jpeg" caption="Figure 1: The Bloch Sphere" >}}
+{{< figure src="./images/quantum/bloch.jpeg" caption="Figure 1: The Bloch Sphere" >}}
 
 
 ### Quantum circuits {#quantum-circuits}
@@ -82,7 +82,7 @@ The Bloch sphere can only represent the state of one qubit, so that is why we wa
 
 For n-qubits, there are \\(2^{n}\\) possible states, so we plot those basis states as equally distributed points on the sphere \\(0^{\otimes n}\\) (_north pole_) and \\(1^{\otimes n}\\) (_south pole_), and all other states are aligned on parallels, so that the number of ones is increasing from north to south.
 
-{{< figure src="/ox-hugo/qsphere.png" caption="Figure 2: The Q Sphere" >}}
+{{< figure src="./images/quantum/qsphere.png" caption="Figure 2: The Q Sphere" >}}
 
 
 #### Two-qubits gates {#two-qubits-gates}
@@ -115,7 +115,7 @@ Goal: Alice wants to send Bob her unknown state \\(| \phi >\_{S} = \alpha |0> + 
 
 We can show that \\(| \phi >\_{S} \oplus | \Psi^{00} >\_{\_{AB}} = | \Psi^{00}>\_{\_{SA}} \oplus | \psi >\_{\_{B}} + | \Psi^{01} >\_{\_{SA}} \oplus \sigma\_{X} | \psi >\_{\_{B}} +  | \Psi^{10} >\_{\_{SA}} \oplus \sigma\_{Z} | \psi >\_{\_{B}}  + | \Psi^{11} >\_{\_{SA}} \oplus \sigma\_{X}\sigma\_{Z} | \psi >\_{\_{B}}\\).
 
-{{< figure src="/ox-hugo/teleportation.png" caption="Figure 3: Quantum teleportation circuit" >}}
+{{< figure src="./images/quantum/teleportation.png" caption="Figure 3: Quantum teleportation circuit" >}}
 
 The protocol is thus depicted in the figure above. For quantum teleportation, we thus need a _Bell state_ to be created for the information to be transmitted. The _Bell test experiments_ have suggested they remain correlated even when measurements are performed independently.
 
@@ -290,7 +290,7 @@ q_2: ┤ H ├┤ P(pi/4) ├┤ P(pi/2) ├────────────
     -   => Inverse QFT: end up with \\(|2^{n} \Theta\_{\Phi}>\\)
     -   Less qubits means less precision
 
-{{< figure src="/ox-hugo/qpe.png" caption="Figure 6: Quantum Phase Estimation (n-qubits)" >}}
+{{< figure src="./images/quantum/qpe.png" caption="Figure 6: Quantum Phase Estimation (n-qubits)" >}}
 
 -   Subtleties
     -   \\(2 \pi i \times \theta\\) factor
@@ -362,7 +362,7 @@ auxiliary_qubit_0: ┤ X ├┤ X ├┤M├
     -   _Plaquettes syndromes:_ check for X-errors
     -   _Vertices syndromes:_ check for Z-error
 
-{{< figure src="/ox-hugo/surface_code.png" caption="Figure 7: QEC - Surface Code" >}}
+{{< figure src="./images/quantum/surface_code.png" caption="Figure 7: QEC - Surface Code" >}}
 
 
 ## Super Conducting Qubits {#super-conducting-qubits}

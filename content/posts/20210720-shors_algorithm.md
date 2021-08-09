@@ -57,7 +57,7 @@ source
 
 ### The circuit... {#the-circuit-dot-dot-dot}
 
-{{< figure src="/ox-hugo/shors.jpeg" caption="Figure 1: Shor's Algorithm - Circuit" >}}
+{{< figure src="./images/quantum/shors.jpeg" caption="Figure 1: Shor's Algorithm - Circuit" >}}
 
 -   Caveats of this circuit
     -   registers if \\(|x>\\) has n qubits -> \\(2 \times n\\) qubits for input register
@@ -67,6 +67,16 @@ source
 ## Experimental Proof {#experimental-proof}
 
 source
-: ([Vandersypen et al. 2001](#orga085a11))
+: ([Vandersypen et al. 2001](#orga7647de))
 
 
+## Links to this note {#links-to-this-note}
+
+-   [Introduction to Quantum Computing And Quantum Hardware]({{<relref "20210505-introduction_to_quantum_computing_and_quantum_hardware.md#" >}})
+
+> [Quantum Computing]({{<relref "20210405-quantum_computing.md#" >}})
+
+
+## Bibliography {#bibliography}
+
+<a id="orga7647de"></a>Vandersypen, Lieven M. K., Matthias Steffen, Gregory Breyta, Costantino S. Yannoni, Mark H. Sherwood, and Isaac L. Chuang. 2001. “Experimental Realization of Shor’s Quantum Factoring Algorithm Using Nuclear Magnetic Resonance.” _Nature_ 414 (6866):883–87. <https://doi.org/10.1038/414883a>.

@@ -9,3 +9,12 @@ draft = false
 -   [Computer Science]({{<relref "20210124000000-computer_science.md#" >}})
 
 
+## Links to this note {#links-to-this-note}
+
+-   [quantum algorithms]({{<relref "20210720-quantum_algorithms.md#" >}})
+
+> [Quantum Computing]({{<relref "20210405-quantum_computing.md#" >}})
+
+-   [Introduction to Quantum Computing And Quantum Hardware]({{<relref "20210505-introduction_to_quantum_computing_and_quantum_hardware.md#" >}})
+
+> [Quantum Computing]({{<relref "20210405-quantum_computing.md#" >}})
