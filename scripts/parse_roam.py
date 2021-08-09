@@ -2,11 +2,12 @@
 # TODO: exlcude private and draft files
 
 import argparse
+import json
 import os
 import re
-import json
-import networkx as nx
+
 import community as louvain
+import networkx as nx
 
 LINKS_SECTION_DELIMITER = "## Links to this note {#links-to-this-note}"
 
@@ -32,25 +33,40 @@ def extract_title(content):
 
 
 def extract_links(content):
-    links = re.findall('<\s+relref\s+"([^"]+)"\s+>', content)
+    links = re.findall(r'<\s*relref\s+"([^"^#]+)\.md#"\s+>', content)
     return links
 
 
+#: [Machine Learning]({{<relref "./20201209095843-ml_org.md#" >}})
+
+
 def create_graph_from_slugs(posts_path, slugs_list):
+    print(slugs_list)
     graph = nx.DiGraph()
     edges = list()
 
     for index, slug in enumerate(slugs_list):
 
-        content = read_file(os.path.join(posts_path, slug + ".md"))
+        filepath = os.path.join(posts_path, slug + ".md")
+        content = read_file(filepath)
+
+        # FIXME: Issue with expoting
+        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/refs/', '', content)
+        content = re.sub(r'\.\./\.\./\.\./Dropbox/Roam/', '', content)
+
+        with open(filepath, "w") as f:
+            f.write(content)
 
         title = extract_title(content)
+        print(title)
 
         graph.add_node(index, id=index, title=title, slug=slug.lower(), rank=1)
 
         links = extract_links(content)
         for l in links:
             edges.append((index, slugs_list.index(l)))
+
+        print(links)
 
     graph.add_edges_from(edges)
 
