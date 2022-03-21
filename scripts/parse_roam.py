@@ -33,7 +33,7 @@ def extract_title(content):
 
 
 def extract_links(content):
-    links = re.findall(r'<\s*relref\s+"([^"^#]+)\.md#"\s+>', content)
+    links = re.findall(r'<\s*relref\s+"[\./]*([^"^#]+)\.md"\s+>', content)
     return links
 
 def update_files(files_list):
@@ -48,6 +48,8 @@ def update_files(files_list):
 
         # FIXME: Issue with expoting
         content = re.sub(r'refs/', '', content)
+
+        content = re.sub("../../../Dropbox/emacs/Roam/", "./", content)
 
         with open(filepath, "w") as f:
             f.write(content)

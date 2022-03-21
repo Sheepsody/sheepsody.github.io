@@ -1,5 +1,5 @@
 baseURL: https://notes.sheepsody.com/
-title: Sheepsody's Second Brain
+title: Sheepsody's Website
 paginate: 5
 theme: PaperMod
 
@@ -15,17 +15,20 @@ minify:
 
 menu:
   main:
-    - name: Home
+    - name: Posts
       url: /
       weight: 1
-    - name: Graph
-      url: graph
-      weight: 2
+    - name: Archive
+      url: archive
+      weight: 3
     - name: Search
       url: search/
       weight: 3
-    - name: Tags
-      url: tags/
+    - name: Brain²
+      url: graph
+      weight: 10
+    - name: CV
+      url: https://github.com/Sheepsody
       weight: 10
 
 outputs:
@@ -44,7 +47,7 @@ params:
   comments: false
 
   homeInfoParams:
-    Title: "Sheepsody's Second Brain"
+    Title: "Sheepsody's Website"
     Content: >
       Welcome to my second brain, the website where I store notes about topics I’m learning about or that I’m simply interested in.
 
