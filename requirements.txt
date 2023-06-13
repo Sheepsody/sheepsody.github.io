@@ -2,3 +2,4 @@ decorator==4.4.2
 networkx==2.5
 numpy==1.19.5
 python-louvain==0.15
+pygraphviz==1.11
