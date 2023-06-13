@@ -27,7 +27,14 @@ def dump_graph(filepath):
     with open(filepath, "w") as out:
         json.dump(
             {
-                "nodes": [l[1] for l in list(graph.nodes(data=True))],
+                "nodes": [
+                    {
+                        "id": nodeid,
+                        "rank": nodedata['rank'],
+                        "group": nodedata['group'],
+                    }
+                    for nodeid, nodedata in graph.nodes.items()
+                ],
                 "links": [{"source": l[0], "target": l[1]} for l in graph.edges()],
             },
             out,
@@ -51,6 +58,15 @@ if __name__ == "__main__":
     graph = pgv.AGraph(in_graph_path, strict=False, directed=True)
     graph = nx.nx_agraph.from_agraph(graph)
     graph = nx.DiGraph(graph)
+
+    nodes = list(graph.nodes)
+    for node in nodes:
+        try:
+            url = graph.nodes[node]['URL']
+            if not ("org-protocol" in url):
+                graph.remove_node(node)
+        except:
+            graph.remove_node(node)
 
     pagerank(graph)
     group_nodes(graph)
