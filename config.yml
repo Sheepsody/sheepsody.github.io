@@ -1,5 +1,5 @@
-baseURL: https://notes.sheepsody.com/
 title: Sheepsody's Website
+baseURL: "https://sheepsody.com"
 paginate: 5
 theme: PaperMod
 
