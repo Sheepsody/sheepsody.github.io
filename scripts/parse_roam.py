@@ -31,6 +31,7 @@ def dump_graph(filepath):
                     {
                         "id": nodeid,
                         "rank": nodedata['rank'],
+                        "label": nodedata['label'],
                         "group": nodedata['group'],
                     }
                     for nodeid, nodedata in graph.nodes.items()

@@ -18,6 +18,9 @@ menu:
     - name: Posts
       url: /
       weight: 1
+    - name: Emacs cfg
+      url: emacs/
+      weight: 3
     - name: Archive
       url: archive
       weight: 3
