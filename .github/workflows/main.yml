@@ -15,7 +15,7 @@ permissions:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Get latest code
@@ -24,9 +24,10 @@ jobs:
           submodules: recursive
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v2.4.13
         with:
-          hugo-version: "0.80.0"
+          hugo-version: "latest"
+          extended: true
 
       - name: Setup Pages
         id: pages
