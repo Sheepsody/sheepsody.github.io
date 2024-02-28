@@ -2,3 +2,8 @@
 	path = themes/PaperMod
 	url = https://github.com/Sheepsody/hugo-PaperMod
     branch = master
+
+[submodule "themes/cactus"]
+	path = themes/cactus
+	url = https://github.com/Sheepsody/hugo-theme-cactus.git
+    branch = main
